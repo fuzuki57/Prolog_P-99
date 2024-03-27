@@ -1,2 +1,4 @@
-my_reverse([], []).
-my_reverse([X|Xs], [Y|X]) :- my_reverse(Xs, Y).
+my_reverse(X, Y) :- my_rev(X, Y, []).
+
+my_rev([], Y, Y).
+my_rev([X|Xs], Y, B) :- my_rev(Xs, Y, [X|B]).
